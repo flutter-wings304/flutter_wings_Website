@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
+import 'autufillhints.dart';
+import 'listequals.dart';
+
 Future main() async {
-  await dotenv.load(fileName: "lib/.env");
+   await dotenv.load(fileName: "lib/.env");
   runApp(const MyApp());
 }
 
@@ -26,7 +29,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const ListEqualFunction(),
     );
   }
 }
