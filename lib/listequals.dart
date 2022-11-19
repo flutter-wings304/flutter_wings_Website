@@ -13,18 +13,45 @@ class _ListEqualFunctionState extends State<ListEqualFunction> {
   Widget build(BuildContext context) {
     List myList1 = [1, 2, 3, 4];
     List myList2 = [1, 2, 3, 4];
+    List myList3 = [1, 2, 3, 4, 5, 6];
+
     return Scaffold(
+      appBar: AppBar(title: Text("List Equals")),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text("Function Result ${listEquals(myList1, myList2)}"),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8.0),
+              child: Text("List 1 $myList1"),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8.0),
+              child: Text("List 2 $myList2"),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 8.0),
+              child: Text("List 3 $myList3"),
+            ),
+            Text(
+                "Function Result for list 1 and list 2 ${listEquals(myList1, myList2)}"),
             const SizedBox(
               height: 10,
             ),
-            Text("Traditional Result ${myList1 == myList2}")
+            Text(
+                "Function Result for list 1 and list 3 ${listEquals(myList1, myList2)}"),
+            const SizedBox(
+              height: 10,
+            ),
+            Text(
+                "Traditional Result  for list 1 and list 2 ${myList1 == myList2}"),
+            const SizedBox(
+              height: 10,
+            ),
+            Text(
+                "Traditional Result  for list 1 and list 3 ${myList1 == myList3}")
           ],
         ),
       ),
