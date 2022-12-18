@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:flutter_wings_website/pdfviewer.dart';
 import 'package:flutter_wings_website/welcome.dart';
 
 import 'autufillhints.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const AutoFillHintsScreen(),
+      home: const PdfViewer(),
     );
   }
 }

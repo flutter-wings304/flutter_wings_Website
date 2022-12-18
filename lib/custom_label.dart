@@ -52,6 +52,55 @@ class _CustomLabelState extends State<CustomLabel> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      body: Padding(
+        padding: const EdgeInsets.all(18.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Single Text Field",
+              style: TextStyle(color: isFocus ? Colors.blue : Colors.grey),
+            ),
+            TextFormField(
+              focusNode: focusNode,
+            ),
+            getLabel(
+              title: "Multiple Text Field 1",
+              key: "focus_node_1",
+            ),
+            TextFormField(
+              focusNode: focusNode1,
+            ),
+            getLabel(
+              title: "Multiple Text Field 2",
+              key: "focus_node_2",
+            ),
+            TextFormField(
+              focusNode: focusNode2,
+            ),
+            getLabel(
+              title: "Multiple Text Field 3",
+              key: "focus_node_3",
+            ),
+            TextFormField(
+              focusNode: focusNode3,
+            ),
+          ],
+        ),
+      ),
+    );
   }
+
+  Widget getLabel({required String title, required String key}) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Text(title,
+          style: TextStyle(
+              color: _focusUnfocus[key] ?? false ? Colors.blue : Colors.grey)),
+    );
+  }
+  //Condition to change color depending upon textfield has focus or not in multitextfield
+
 }
