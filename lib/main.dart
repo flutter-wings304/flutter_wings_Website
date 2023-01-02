@@ -5,6 +5,7 @@ import 'package:flutter_wings_website/welcome.dart';
 
 import 'autufillhints.dart';
 import 'listequals.dart';
+import 'new_screen.dart';
 
 Future main() async {
    await dotenv.load(fileName: "lib/.env");
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const AutoFillHintsScreen(),
+      home: const ViewSaleScreen(),
     );
   }
 }
