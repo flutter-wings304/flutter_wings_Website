@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_wings_website/pdfviewer.dart';
 import 'package:flutter_wings_website/welcome.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'autufillhints.dart';
+import 'blog_list.dart';
 import 'listequals.dart';
 import 'new_screen.dart';
 
@@ -20,7 +22,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Title of Your App',
+      
       theme: ThemeData(
+        // fontFamily: GoogleFonts.notoSans(),
         // This is the theme of your application.
         //
         // Try running your application with "flutter run". You'll see the
@@ -31,8 +35,9 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.blue,
+        fontFamily: "Noto"
       ),
-      home: const ViewSaleScreen(),
+      home: const BlogListScreen(),
     );
   }
 }

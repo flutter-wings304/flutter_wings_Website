@@ -36,6 +36,9 @@ dependencies:
   flutter_dotenv: ^5.0.2
   syncfusion_flutter_pdfviewer: ^20.3.59
   intl: ^0.17.0
+  url_launcher: ^6.1.7
+  font_awesome_flutter: ^10.3.0
+  google_fonts: ^3.0.1
 
 dev_dependencies:
   flutter_test:
