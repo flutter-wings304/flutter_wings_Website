@@ -8,14 +8,18 @@ class Welcomescreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GridView.builder(
+      body: Column(children:[
+      GridView.builder(
         itemCount: myList.length,
         itemBuilder: (BuildContext context, int index) {
           return Image.asset("assets/images/${myList[index]}");
         },
         gridDelegate:
             const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+
       ),
+      BlogListScreen()
+      ])
     );
   }
 }
